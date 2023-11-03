@@ -11,7 +11,9 @@ class HomePage extends StatelessWidget {
         backgroundColor: AppColors.background,
         elevation: 0,
         title: Text('5minuteflutter'),
-        actions: [Icon(Icons.location_on_outlined)],
+        actions: [
+          Icon(Icons.location_on_outlined),
+        ],
       ),
       body: ListView(children: mockUsersFromServer()),
     );
