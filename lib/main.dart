@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_print
 
+import 'package:firstporject/pages/home.dart';
 import 'package:firstporject/pages/login_page.dart';
 import 'package:firstporject/styles/app_color.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,11 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Urbanist',
         scaffoldBackgroundColor: AppColors.background,
       ),
-      home: LoginPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LoginPage(),
+        '/home': (context) => HomePage(),
+      },
     );
   }
 }
