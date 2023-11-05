@@ -1,9 +1,6 @@
 // ignore_for_file: avoid_print
 
-import 'package:firstporject/pages/home_page.dart';
-import 'package:firstporject/pages/login_page.dart';
-import 'package:firstporject/pages/main_page.dart';
-import 'package:firstporject/pages/test_page.dart';
+import 'package:firstporject/config/app_routes.dart';
 import 'package:firstporject/styles/app_color.dart';
 import 'package:flutter/material.dart';
 
@@ -22,12 +19,8 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.background,
         brightness: Brightness.dark,
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => LoginPage(),
-        '/home': (context) => HomePage(),
-        '/main': (context) => MainPage(),
-      },
+      initialRoute: AppRoutes.login,
+      routes: AppRoutes.pages,
     );
   }
 }

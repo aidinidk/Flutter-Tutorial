@@ -1,8 +1,9 @@
+import 'package:firstporject/config/app_icons.dart';
+import 'package:firstporject/config/app_strings.dart';
 import 'package:firstporject/pages/home_page.dart';
 import 'package:firstporject/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -20,24 +21,24 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('svg/ic_home.svg'),
-            label: 'Home',
+            icon: SvgPicture.asset(AppIcons.icHome),
+            label: AppStrings.home,
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('svg/ic_favorite.svg'),
-            label: "Favorite",
+            icon: SvgPicture.asset(AppIcons.icFavorite),
+            label: AppStrings.favorite,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.add),
-            label: "Post",
+            icon: SvgPicture.asset(AppIcons.icAdd),
+            label: AppStrings.posts,
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('svg/ic_messages.svg'),
-            label: "Messages",
+            icon: SvgPicture.asset(AppIcons.icMessages),
+            label: AppStrings.messages,
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('svg/ic_person.svg'),
-            label: "User",
+            icon: SvgPicture.asset(AppIcons.icUser),
+            label: AppStrings.user,
           ),
         ],
         currentIndex: currentIndex,
@@ -57,13 +58,13 @@ class _MainPageState extends State<MainPage> {
   final pages = [
     HomePage(),
     Center(
-      child: Text('Favorite'),
+      child: Text(AppStrings.favorite),
     ),
     Center(
-      child: Text('Add posts'),
+      child: Text(AppStrings.add),
     ),
     Center(
-      child: Text('Messages'),
+      child: Text(AppStrings.messages),
     ),
     ProfilePage(),
   ];

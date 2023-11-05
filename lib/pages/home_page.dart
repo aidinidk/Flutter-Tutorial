@@ -1,9 +1,7 @@
-import 'dart:js';
-
 import 'package:firstporject/components/post_item.dart';
 import 'package:firstporject/components/toolbar.dart';
-import 'package:firstporject/styles/app_color.dart';
-import 'package:firstporject/styles/app_text.dart';
+import 'package:firstporject/config/app_icons.dart';
+import 'package:firstporject/config/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -16,11 +14,10 @@ class HomePage extends StatelessWidget {
     mockUsersFromServer();
     return Scaffold(
         appBar: ToolBar(
-          title: "5minuteflutter",
+          title: AppStrings.appName,
           actions: [
             IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("svg/ic_location.svg")),
+                onPressed: () {}, icon: SvgPicture.asset(AppIcons.icLocation)),
           ],
         ),
         body: ListView.separated(
